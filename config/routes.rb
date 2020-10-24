@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   resources :registrations,only:[:create]
   resources :books
   resources :relationships, only: [:create, :destroy]
+  resources :comments, only: [:create,:destroy,:show]
   
 end
