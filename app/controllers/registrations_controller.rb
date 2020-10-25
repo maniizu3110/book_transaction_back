@@ -6,7 +6,8 @@ class RegistrationsController < ApplicationController
         password: params['user']['password'],
         password_confirmation: params['user']['password_confirmation'],
         username: params['user']['username'],
-        major: params['user']['major']
+        major: params['user']['major'],
+        grade: params['user']['grade'],
       )
   
       if user
