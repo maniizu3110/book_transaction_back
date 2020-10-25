@@ -24,6 +24,11 @@ class BooksController < ApplicationController
         render json: { status: 'SUCCESS', message: 'Loaded the book', data: book }
     end
 
+    def order
+        books = Book.where(user_id:params[:id]).order(created_at: :desc)
+        render json: { status: 'SUCCESS', message: 'Loaded the history books', orders: books }
+    end
+
     def complete
         book = Book.find(params[:id])
         book.complete = true
@@ -51,8 +56,6 @@ class BooksController < ApplicationController
         book.destroy
     end
 
-    def edit
-    end
   
     
   end

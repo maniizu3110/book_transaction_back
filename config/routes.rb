@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get :logged_in, to: "sessions#logged_in"
   get 'confirm/:id',to: 'relationships#confirm?'
   put 'complete/:id',to: 'books#complete'
+  get 'orders/:id',to: 'books#order'
   
   # get :users, to: "users#index"
   # get :user, to: "users#point"
