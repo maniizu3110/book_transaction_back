@@ -2,10 +2,12 @@ class CommentsController < ApplicationController
     include CurrentUserConcern
 
     def create
+
         comment = Comment.create!(
           content: params['comment']['content'],
           book_id: params['comment']['book_id'],
-          user_id: session[:user_id]
+          user_id: session[:user_id],
+          username: User.find(session[:user_id]).username
         )
         render json: {comment: comment}
     end

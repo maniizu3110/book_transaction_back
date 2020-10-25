@@ -24,6 +24,17 @@ class BooksController < ApplicationController
         render json: { status: 'SUCCESS', message: 'Loaded the book', data: book }
     end
 
+    def complete
+        book = Book.find(params[:id])
+        book.complete = true
+        book.bought_user = params[:book][:bought_user]
+        if book.save
+            render json: { status: 'SUCCESS', message: 'complete book transaction', data: book }
+        else
+            render json: { status: 'ERROR', message: 'Not complete', data: book.errors }
+        end
+    end
+
     def update
         book = Book.find(params[:id])
         book.content = params['book']['content']
@@ -31,7 +42,7 @@ class BooksController < ApplicationController
         if book.save
             render json: { status: 'SUCCESS', message: 'Update the book', data: book }
         else
-            render json: { status: 'SUCCESS', message: 'Not updated', data: book.errors }
+            render json: { status: 'ERROR', message: 'Not updated', data: book.errors }
         end
     end
 

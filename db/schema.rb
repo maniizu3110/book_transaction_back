@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_24_135732) do
+ActiveRecord::Schema.define(version: 2020_10_25_015831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_10_24_135732) do
     t.integer "price"
     t.string "condition"
     t.boolean "complete", default: false, null: false
+    t.integer "bought_user"
     t.index ["user_id", "created_at"], name: "index_books_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_books_on_user_id"
   end
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_10_24_135732) do
     t.bigint "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
     t.index ["book_id"], name: "index_comments_on_book_id"
     t.index ["user_id", "created_at"], name: "index_comments_on_user_id_and_created_at"
   end
