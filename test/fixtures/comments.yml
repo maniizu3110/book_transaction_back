@@ -2,10 +2,10 @@
 
 one:
   content: MyText
-  user_id: 
+  user_id:
   book: one
 
 two:
   content: MyText
-  user_id: 
+  user_id:
   book: two
