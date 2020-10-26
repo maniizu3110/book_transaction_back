@@ -25,7 +25,7 @@ class BooksController < ApplicationController
     end
 
     def order
-        books = Book.where(user_id:params[:id]).order(created_at: :desc)
+        books = Book.where(bought_user:params[:id]).order(created_at: :desc)
         render json: { status: 'SUCCESS', message: 'Loaded the history books', orders: books }
     end
 

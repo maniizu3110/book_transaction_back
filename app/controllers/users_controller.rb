@@ -38,9 +38,9 @@ class UsersController < ApplicationController
     end
 
     def followers
-    user  = User.find(params[:id])
-    users = user.followers
-    render json: {status: 'success',users:users}
+        user  = User.find(params[:id])
+        users = user.followers
+        render json: {status: 'success',users:users}
     end
   
     
