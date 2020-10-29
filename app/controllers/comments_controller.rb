@@ -5,8 +5,8 @@ class CommentsController < ApplicationController
         comment = Comment.create!(
           content: params['comment']['content'],
           book_id: params['comment']['book_id'],
-          user_id: session[:user_id],
-          username: User.find(session[:user_id]).username
+          user_id: params['comment']['userId'],
+          username: User.find(params['comment']['userId']).username
         )
         render json: {comment: comment}
     end

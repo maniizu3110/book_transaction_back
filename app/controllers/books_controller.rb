@@ -8,8 +8,7 @@ class BooksController < ApplicationController
           major: params['book']['major'],
           price: params['book']['price'],
           condition: params['book']['condition'],
-
-          user_id: session[:user_id]
+          user_id: params['book']['userId']
         )
         render json: {book: book}
     end

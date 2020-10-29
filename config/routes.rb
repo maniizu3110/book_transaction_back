@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'confirm/:id',to: 'relationships#confirm?'
   put 'complete/:id',to: 'books#complete'
   get 'orders/:id',to: 'books#order'
+  get 'relationships/indicate',to: 'relationships#indicate'
   
   # get :users, to: "users#index"
   # get :user, to: "users#point"
