@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   delete :logout, to: "sessions#logout"
   get :logged_in, to: "sessions#logged_in"
-  get 'confirm/:id',to: 'relationships#confirm?'
+  get 'confirm',to: 'relationships#confirm?'
   put 'complete/:id',to: 'books#complete'
   get 'orders/:id',to: 'books#order'
   get 'relationships/indicate',to: 'relationships#indicate'

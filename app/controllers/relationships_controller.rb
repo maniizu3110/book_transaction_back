@@ -23,11 +23,11 @@ class RelationshipsController < ApplicationController
     end
 
     def confirm?
-        relationship = Relationship.find_by(follower_id:@current_user.id,followed_id:params[:id])
+        relationship = Relationship.find_by(follower_id:params['currentUserId'],followed_id:params['urlUserId'])
         if relationship
-            render json: {following:true}
+            render json: {relationship:relationship,following:true}
         else
-            render json: {following:false}
+            render json: {relationship:relationship,following:false}
         end
     end
 end
