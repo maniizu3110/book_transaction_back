@@ -6,6 +6,7 @@
 - react/redux
 - axios
 - デプロイ：firebase
+
 フロントエンドのソースコードはこちらをご覧ください。
 https://github.com/maniizu3110/book_transaction_front
 
