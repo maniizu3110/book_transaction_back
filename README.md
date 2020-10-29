@@ -12,7 +12,6 @@ https://github.com/maniizu3110/book_transaction_front
 
 ## バックエンド
 - rails api
-rails apiのソースコードはこちらをご覧ください。
 - 画像のみfirebaseに保存
 - デプロイ：heroku
 
