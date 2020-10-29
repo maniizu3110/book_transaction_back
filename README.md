@@ -1,24 +1,31 @@
-# README
+# アプリの概要
+大学生が教科書を売買・交換するためのアプリケーションです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 使用技術
+## フロントエンド
+- react/redux
+- axios
+- デプロイ：firebase
+フロントエンドのソースコードはこちらをご覧ください。
+https://github.com/maniizu3110/book_transaction_front
 
-Things you may want to cover:
+## バックエンド
+- rails api
+rails apiのソースコードはこちらをご覧ください。
+- 画像のみfirebaseに保存
+- デプロイ：heroku
 
-- Ruby version
+# 機能
+* ユーザー登録・更新・削除・一覧
+* 投稿（画像）登録・更新・削除・一覧
+* コメント
+* フォロー・フォロワー登録・削除・一覧
 
-- System dependencies
+## ログイン用アカウント
+* メールアドレス ：maniizu7777@gmail.com
+* パスワード：maniizu7777
 
-- Configuration
+## 追加予定機能
 
-- Database creation
+時間割を登録できるようにすることで、時間割に基づいて必要な教科書をリコメンドする機能
 
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
